@@ -28,10 +28,12 @@
 # WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 # Open Turing Version
-
+win32:LIBS += -lAdvapi32 user32.lib
 CURRENT_VERSION = 1.2.0 beta
 VERSTR = '\\"$${CURRENT_VERSION}\\"'  # place quotes around the version string
 DEFINES = VERSION_STRING=\"$${VERSTR}\" # create a VER macro containing the version string
+
+win32:LIBS += -lAdvapi32 user32.lib
 
 # files used in the running process
 # file is found in support/bin/TuringEXEProlog.exe
